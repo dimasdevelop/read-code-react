@@ -78,7 +78,7 @@ export default function QrCodePlugin(props) {
 				}}>
 				{cameraScanning ? 'Detener Escaneo' : 'Escanear con cámara'}
 			</Button>
-			<p>{cameraIdStatus}</p>
+			{/* <p>{cameraIdStatus}</p> */}
 		</>
 	)
 }
