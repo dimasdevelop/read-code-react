@@ -25,8 +25,8 @@ function App(props) {
 											qrCodeSuccessCallback={handleSuccessScan}
 											qrCodeErrorCallback={handleErrorScan}
 			/>
-      		{/* <p>{text}</p> */}
-      		{/* <p>{result}</p> */}
+      		{ <p>{text}</p> }
+      		{ <p>{result}</p> }
 
     </>
   );
