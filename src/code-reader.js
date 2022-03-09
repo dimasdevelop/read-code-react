@@ -58,11 +58,6 @@ export default function QrCodePlugin(props) {
 		if (!props.qrCodeSuccessCallback) {
 			throw 'qrCodeSuccessCallback is required callback.'
 		}
-
-		//const html5QrcodeScanner = new Html5QrcodeScanner(qrCodeRegionId, config, verbose)
-		//html5QrCode.start(props.qrCodeSuccessCallback, props.qrCodeErrorCallback)
-
-		//handleStartCamera()
 		return () => {}
 	}, [])
 
