@@ -2,12 +2,10 @@ import React, { useState, useRef, useEffect, useCallback } from 'react'
 import { MultiFormatReader, BarcodeFormat } from '@zxing/library';
 import { Html5Qrcode, Html5QrcodeScanner } from 'html5-qrcode'
 import { Button } from 'antd'
-const reader = new MultiFormatReader();
 
 
 
-
-const qrCodeRegionId = 'CODE_93'
+const qrCodeRegionId = new MultiFormatReader();
 export default function QrCodePlugin(props) {
 	const [cameraScanning, setCameraScanning] = useState(false)
 	const [cameraIdStatus, setCameraId] = useState('')
