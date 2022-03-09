@@ -1,25 +1,27 @@
-import React, { useState } from 'react';
-import { QrReader } from 'react-qr-reader';
+import React, { useState, useRef, useEffect, useCallback } from 'react'
 
+import { Html5Qrcode, Html5QrcodeScanner } from 'html5-qrcode'
+import { Button } from 'antd'
 
+import QrCodePlugin from './code-reader'
 function App(props) {
-  const [data, setData] = useState('No result');
+	const handleSuccessScan = (decodeText, decodeResult) => {
+		console.log('FFFFFF ', decodeResult)
+	}
+
+	const handleErrorScan = (item) => {}
+
+
   return (
     <>
-      <QrReader
-        constraints={{ facingMode: 'environment' }}
-        onResult={(result, error) => {
-          if (!!result) {
-            setData(result?.text);
-          }
+      <QrCodePlugin
+											fps={10}
+											qrbox={250}
+											disableFlip={false}
+											qrCodeSuccessCallback={handleSuccessScan}
+											qrCodeErrorCallback={handleErrorScan}
+			/>
 
-          if (!!error) {
-            console.info(error);
-          }
-        }}
-        style={{ width: '100%' }}
-      />
-      <p>{data}</p>
     </>
   );
 }
