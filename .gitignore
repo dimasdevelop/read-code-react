@@ -13,11 +13,21 @@
 
 # misc
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+*.swp
 
+*.swp
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/src/img
+
+
+env.cl.config.json
+env.co.config.json
+env.mx.config.json
