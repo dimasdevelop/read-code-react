@@ -7,6 +7,7 @@ function App(props) {
   return (
     <>
       <QrReader
+        constraints={{ facingMode: 'environment' }}
         onResult={(result, error) => {
           if (!!result) {
             setData(result?.text);
