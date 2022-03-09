@@ -5,7 +5,7 @@ import { Button } from 'antd'
 
 
 
-const qrCodeRegionId = "html5qr-code-full-region";
+const qrCodeRegionId = new MultiFormatReader();
 
 
 export default function QrCodePlugin(props) {
@@ -26,7 +26,7 @@ export default function QrCodePlugin(props) {
 						{ facingMode: "environment" },
 						{
 							fps: 10, // Optional, frame per seconds for qr code scanning
-							qrbox: { width: 250, height: 250 }, // Optional, if you want bounded box UI
+							qrbox:props.qrbox , // Optional, if you want bounded box UI
 						},
 						props.qrCodeSuccessCallback,
 						props.qrCodeErrorCallback

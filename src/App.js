@@ -5,10 +5,10 @@ import QrCodePlugin from './code-reader'
 
 function App(props) {
   const [text, settext] = useState('')
-  const [result, setresult] = useState('')
 
 	const handleSuccessScan = (decodeText, decodeResult) => {
-		console.log('FFFFFF ', decodeResult)
+		console.log('FFFFFF ', decodeText)
+    settext(decodeText)
 	}
 
 	const handleErrorScan = (item) => {
@@ -20,11 +20,13 @@ function App(props) {
     <>
       <QrCodePlugin
 											fps={10}
-											qrbox={250}
+											qrbox={{ width: 700, height: 200 } }
 											disableFlip={false}
 											qrCodeSuccessCallback={handleSuccessScan}
 											qrCodeErrorCallback={handleErrorScan}
 			/>
+      { <p>{text}</p> }
+
     </>
   );
 }
