@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react'
-import { Html5Qrcode, Html5QrcodeScanner } from 'html5-qrcode'
 import { Button } from 'antd'
 import QrCodePlugin from './code-reader'
+import QrCodePluginRead from './code-reader-file'
 
 function App(props) {
   const [text, settext] = useState('')
@@ -18,13 +18,19 @@ function App(props) {
 
   return (
     <>
-      <QrCodePlugin
+      {/* <QrCodePlugin
 											fps={10}
 											qrbox={{ width: 700, height: 200 } }
 											disableFlip={false}
 											qrCodeSuccessCallback={handleSuccessScan}
 											qrCodeErrorCallback={handleErrorScan}
-			/>
+			/>   */}
+      <QrCodePluginRead
+    
+        qrCodeSuccessCallback={handleSuccessScan}
+        qrCodeErrorCallback={handleErrorScan}
+      />
+
       { <p>{text}</p> }
 
     </>

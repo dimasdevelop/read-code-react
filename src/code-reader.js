@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react'
-import { MultiFormatReader, BarcodeFormat } from '@zxing/library';
-import { Html5Qrcode, Html5QrcodeScanner } from 'html5-qrcode'
+import { MultiFormatReader } from '@zxing/library';
+import { Html5Qrcode } from 'html5-qrcode'
 import { Button } from 'antd'
 
 
