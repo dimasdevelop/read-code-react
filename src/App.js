@@ -9,11 +9,11 @@ function App(props) {
 
 	const handleSuccessScan = (decodeText, decodeResult) => {
 		console.log('FFFFFF ', decodeResult)
-    settext(decodeText)
-    setresult(decodeResult)
 	}
 
-	const handleErrorScan = (item) => {}
+	const handleErrorScan = (item) => {
+    console.log('Error ', item)
+  }
 
 
   return (
@@ -25,9 +25,6 @@ function App(props) {
 											qrCodeSuccessCallback={handleSuccessScan}
 											qrCodeErrorCallback={handleErrorScan}
 			/>
-      		{ <p>{text}</p> }
-      		{ <p>{result}</p> }
-
     </>
   );
 }
