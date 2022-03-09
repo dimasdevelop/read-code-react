@@ -5,7 +5,9 @@ import { Button } from 'antd'
 
 
 
-const qrCodeRegionId = new MultiFormatReader();
+const qrCodeRegionId = "html5qr-code-full-region";
+
+
 export default function QrCodePlugin(props) {
 	const [cameraScanning, setCameraScanning] = useState(false)
 	const [cameraIdStatus, setCameraId] = useState('')
